@@ -39,7 +39,7 @@ Ouput (rs):
   "detail": [
       {"type": "sub", "src_i": [0], "tgt": "s", "src": "k", "tgt_i": [0], "cost": 1}, 
       {"type": "none", "src_i": [1, 2, 3], "tgt": "itt", "src": "itt", "tgt_i": [1, 2, 3], "cost": 0}, 
-      {"type": "update", "src_i": [4], "tgt": "i", "src": "e", "tgt_i": [4], "cost": 1}, 
+      {"type": "sub", "src_i": [4], "tgt": "i", "src": "e", "tgt_i": [4], "cost": 1}, 
       {"type": "none", "src_i": [5], "tgt": "n", "src": "n", "tgt_i": [5], "cost": 0},
       {"type": "ins", "src_i": [], "tgt": "g", "src": "", "tgt_i": [6], "cost": 1}
   ], 
