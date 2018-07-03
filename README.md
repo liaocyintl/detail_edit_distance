@@ -22,7 +22,7 @@ Ref:
 
 Quick Start
 ======
-**Example 1.** showing detail modifications between "kitten" and "sitting":
+**Example 1.** get detail modifications between "kitten" and "sitting":
 
 Python code:
 ```python
@@ -58,7 +58,7 @@ Ouput (rs):
     - "cost": How many cost is added to in this modification.
 - "cost": the "cost" element is the total cost of edit distance between source and target
 
-**Example 2.** showing detail modifications with morphological analysis:
+**Example 2.** get detail modifications with morphological analysis:
 
 If you want to compare two sentences in word, you can split them into words as the input:
 ```python
@@ -113,7 +113,7 @@ output:
 You can see the sub-string "itt" is split into characters.
 
 
-**Example 4.** output as least cost:
+**Example 4.** output as the least cost on source:
 
 Such as in a typing exercise application, we need to score user typing.
 The text maybe a long content, but the user can types only a part of the text.
@@ -152,11 +152,15 @@ Citation
 ======
 Please cite our paper for any purpose of usage.
 ```text
-@inproceedings{liao2013,
+@article{liao2013,
     title={Development of the Japanese Input Training System: Four Types of Training and the Fast Algorithm for Automatic Scoring},
     author={Liao, Chenyi and Minoura, Emiko and Takeoka, Saori and Ozaki Masahiro},
-    booktitle={Proceedings of the 75th National Convention of IPSJ},
+    journal={Proceedings of the 75th National Convention of IPSJ},
     pages={655--656},
     year={2013}
 }
 ```
+
+Others
+======
+[中文版说明](https://liaocy.net/2018/20180703-detaileditdistance/)
