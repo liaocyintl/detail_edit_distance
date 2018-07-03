@@ -36,27 +36,27 @@ print(rs)
 Ouput (rs):
 ```json
 {
-  'detail': [
-      {'type': 'sub', 'src_i': [0], 'tgt': 's', 'src': 'k', 'tgt_i': [0], "cost": 1}, 
-      {'type': 'none', 'src_i': [1, 2, 3], 'tgt': 'itt', 'src': 'itt', 'tgt_i': [1, 2, 3], "cost": 0}, 
-      {'type': 'update', 'src_i': [4], 'tgt': 'i', 'src': 'e', 'tgt_i': [4], "cost": 1}, 
-      {'type': 'none', 'src_i': [5], 'tgt': 'n', 'src': 'n', 'tgt_i': [5], "cost": 0}, 
-      {'type': 'ins', 'src_i': [], 'tgt': 'g', 'src': '', 'tgt_i': [6], "cost": 1}
+  "detail": [
+      {"type": "sub", "src_i": [0], "tgt": "s", "src": "k", "tgt_i": [0], "cost": 1}, 
+      {"type": "none", "src_i": [1, 2, 3], "tgt": "itt", "src": "itt", "tgt_i": [1, 2, 3], "cost": 0}, 
+      {"type": "update", "src_i": [4], "tgt": "i", "src": "e", "tgt_i": [4], "cost": 1}, 
+      {"type": "none", "src_i": [5], "tgt": "n", "src": "n", "tgt_i": [5], "cost": 0},
+      {"type": "ins", "src_i": [], "tgt": "g", "src": "", "tgt_i": [6], "cost": 1}
   ], 
-  'cost': 3
+  "cost": 3
 }
 ```
 
-- 'detail': The 'delail' element shows detail modification from source "kitten" to target "sitting".
-    - 'type' is enumerated in ["none", "ins", "del", "sub"]
+- "detail": The 'delail' element shows detail modification from source "kitten" to target "sitting".
+    - "type" is enumerated in ["none", "ins", "del", "sub"]
         - 'none":  none difference between source and target
-        - 'ins': insertion of substring in target for substring in source
+        - "ins": insertion of substring in target for substring in source
         - 'del': deletion of substring in target for substring in source
-        - 'sub': substitution of substring in target for substring in source
-    - 'src' and 'tgt': substring in source and target
-    - 'src_i' and 'tgt_i': indexes of substring in source and target
-    - 'cost': How many cost is added to in this modification.
-- 'cost': the 'cost' element is the total cost of edit distance between source and target
+        - "sub": substitution of substring in target for substring in source
+    - "src" and "tgt": substring in source and target
+    - "src_i" and "tgt_i": indexes of substring in source and target
+    - "cost": How many cost is added to in this modification.
+- "cost": the "cost" element is the total cost of edit distance between source and target
 
 **Example 2.** showing detail modifications with morphological analysis:
 
@@ -72,12 +72,12 @@ print(rs)
 Output:
 ```json
 {
-  'cost': 3, 
-  'detail': [
-      {'src_i': [0], 'src': 'I', 'tgt_i': [0], 'tgt': 'I', 'type': 'none', 'cost': 0}, 
-      {'src_i': [1], 'src': 'have', 'tgt_i': [1], 'tgt': 'had', 'type': 'sub', 'cost': 1}, 
-      {'src_i': [2, 3], 'src': 'adream', 'tgt_i': [2, 3], 'tgt': 'adream', 'type': 'none', 'cost': 0}, 
-      {'src_i': [], 'src': '', 'tgt_i': [4, 5], 'tgt': 'aboutyou', 'type': 'ins', 'cost': 2}
+  "cost": 3, 
+  "detail": [
+      {"src_i": [0], "src": "i", "tgt_i": [0], "tgt": "i", "type": "none", "cost": 0}, 
+      {"src_i": [1], "src": "have", "tgt_i": [1], "tgt": "had", "type": "sub", "cost": 1}, 
+      {"src_i": [2, 3], "src": "adream", "tgt_i": [2, 3], "tgt": "adream", "type": "none", "cost": 0}, 
+      {"src_i": [], "src": "", "tgt_i": [4, 5], "tgt": "aboutyou", "type": "ins", "cost": 2}
   ]
 }
 ```
@@ -98,19 +98,19 @@ output:
 
 ```json
 {
-  'cost': 3, 
-  'detail': [
-      {'src': 'k', 'cost': 1, 'type': 'sub', 'tgt_i': [0], 'src_i': [0], 'tgt': 's'}, 
-      {'src': 'i', 'cost': 0, 'type': 'none', 'tgt_i': [1], 'src_i': [1], 'tgt': 'i'}, 
-      {'src': 't', 'cost': 0, 'type': 'none', 'tgt_i': [2], 'src_i': [2], 'tgt': 't'}, 
-      {'src': 't', 'cost': 0, 'type': 'none', 'tgt_i': [3], 'src_i': [3], 'tgt': 't'}, 
-      {'src': 'e', 'cost': 1, 'type': 'sub', 'tgt_i': [4], 'src_i': [4], 'tgt': 'i'}, 
-      {'src': 'n', 'cost': 0, 'type': 'none', 'tgt_i': [5], 'src_i': [5], 'tgt': 'n'}, 
-      {'src': '', 'cost': 1, 'type': 'ins', 'tgt_i': [6], 'src_i': [], 'tgt': 'g'}
+  "cost": 3, 
+  "detail": [
+      {"src": "k", "cost": 1, "type": "sub", "tgt_i": [0], "src_i": [0], "tgt": "s"}, 
+      {"src": "i", "cost": 0, "type": "none", "tgt_i": [1], "src_i": [1], "tgt": "i"}, 
+      {"src": "t", "cost": 0, "type": "none", "tgt_i": [2], "src_i": [2], "tgt": "t"}, 
+      {"src": "t", "cost": 0, "type": "none", "tgt_i": [3], "src_i": [3], "tgt": "t"}, 
+      {"src": "e", "cost": 1, "type": "sub", "tgt_i": [4], "src_i": [4], "tgt": "i"}, 
+      {"src": "n", "cost": 0, "type": "none", "tgt_i": [5], "src_i": [5], "tgt": "n"}, 
+      {"src": "", "cost": 1, "type": "ins", "tgt_i": [6], "src_i": [], "tgt": "g"}
   ]}
 
 ```
-You can see the sub-string 'itt' is split into characters.
+You can see the sub-string "itt" is split into characters.
 
 
 **Example 4.** output as least cost:
@@ -136,16 +136,16 @@ print(rs)
 
 ```json
 {
-  'detail': [
-    {'tgt_i': [0], 'src': 'I', 'type': 'none', 'src_i': [0], 'tgt': 'I', 'cost': 0}, 
-    {'tgt_i': [1], 'src': 'had', 'type': 'sub', 'src_i': [1], 'tgt': 'have', 'cost': 1}, 
-    {'tgt_i': [2, 3, 4, 5], 'src': 'adreamthatmy', 'type': 'none', 'src_i': [2, 3, 4, 5], 'tgt': 'adreamthatmy', 'cost': 0}
+  "detail": [
+    {"tgt_i": [0], "src": "i", "type": "none", "src_i": [0], "tgt": "i", "cost": 0}, 
+    {"tgt_i": [1], "src": "had", "type": "sub", "src_i": [1], "tgt": "have", "cost": 1}, 
+    {"tgt_i": [2, 3, 4, 5], "src": "adreamthatmy", "type": "none", "src_i": [2, 3, 4, 5], "tgt": "adreamthatmy", "cost": 0}
   ], 
-  'cost': 1
+  "cost": 1
 }
 
 ```
-You can see only 'had' in source was wrong.
+You can see only "had" in source was wrong.
 Therefore the effective typing numbers should be len(source) - rs["cost"] = 6 - 1 = 5
 
 Citation
